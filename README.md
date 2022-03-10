@@ -14,7 +14,7 @@ Calculate from source currency to target currency
     "from": "JPY",
     "to": "HKD",
     "rate": 0.067,
-    "amount": 6.69
+    "amount": '6.69'
 }
 ```
 
