@@ -14,10 +14,10 @@ router.get('/:source/:target/:amount', function(req, res, next) {
   res.json(exchange.calculateExchange(source, target, parseFloat(amount)));
 });
 
-router.post('/:source/:target/:rate', function(req, res, next) {
-  let source = req.params.source.toUpperCase();
-  let target = req.params.target.toUpperCase();
-  let rate = req.params.rate;
+router.post('/', function(req, res, next) {
+  let source = req.body.source.toUpperCase();
+  let target = req.body.target.toUpperCase();
+  let rate = req.body.rate;
   if (!source || !target || !rate || isNaN(rate)) {
     res.sendStatus(400); 
     return;

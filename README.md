@@ -5,6 +5,7 @@
 Calculate from source currency to target currency
 
 **Sample Request**
+
 `/exchange/jpy/HKD/99.9`
 
 **Sample Response**
@@ -30,12 +31,23 @@ Calculate from source currency to target currency
 
 --- 
 
-### POST - /exchange/{sourceCurrency}/{targetCurrency}/{rate}
+### POST - /exchange/
 
 Insert/Update from source currency to target currency exchange rate
 
 **Sample Request**
-`exchange/jpy/hkd/0.067`
+
+`/exchange/`
+
+**Sample Body**
+
+```json
+{
+    "source": "jpy",
+    "target": "hkd",
+    "rate": 0.067
+}
+```
 
 **Sample Response**
 ```json
