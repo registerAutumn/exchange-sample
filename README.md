@@ -21,6 +21,7 @@ Calculate from source currency to target currency
 **Exception**
 - Invalid source currency
 - Invalid target currency
+- Invalid amount
 
 **Exception Response**
 ```
@@ -68,5 +69,15 @@ Insert/Update from source currency to target currency exchange rate
         "JPY": 111.801,
         "USD": 1
     }
+}
+```
+
+**Exception**
+- Invalid exchange rate
+
+**Exception Response**
+```
+{
+    "message": "Invalid exchange rate"
 }
 ```
